@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserMaintenance.Entities
 {
-    class User
+    public class User
     {
         public Guid ID { get; set; }
         public string FirstName { get; set; }
@@ -16,11 +16,11 @@ namespace UserMaintenance.Entities
             get
             {
                 return string.Format(
-                    "{0}{1}"),
+                    "{0} {1}",
                     LastName,
                     FirstName);
             }
         }
 
-    }
+    } 
 }
