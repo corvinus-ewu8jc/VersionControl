@@ -40,5 +40,13 @@ namespace UserMaintenance
             };
             users.Add(u);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            button2.Text = "Törlés";
+            var törlés = listBox1.SelectedItem;
+            if (törlés != null)
+                users.Remove((User)törlés);
+        }
     }
 }
