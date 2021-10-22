@@ -15,6 +15,7 @@ namespace IRF_6.het
         PortfolioEntities context = new PortfolioEntities();
         List<Tick> Ticks;
         List<Entities.PortfolioItem> Portfolio = new List<Entities.PortfolioItem>();
+        private object showfiledialog;
 
         public Form1()
         {
@@ -66,6 +67,10 @@ namespace IRF_6.het
             return value;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            showfiledialog
+        }
     }
      
   
