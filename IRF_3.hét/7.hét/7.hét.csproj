@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F6B8D9DC-8F13-4CDA-8C24-5F399B6CDA03}</ProjectGuid>
+    <ProjectGuid>{F2CAAC41-2E74-4B46-8F6D-471BF52B6AFD}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>IRF_3.hét</RootNamespace>
-    <AssemblyName>IRF_3.hét</AssemblyName>
+    <RootNamespace>_7.hét</RootNamespace>
+    <AssemblyName>7.hét</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="7.het.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="7.het.Designer.cs">
-      <DependentUpon>7.het.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,9 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
