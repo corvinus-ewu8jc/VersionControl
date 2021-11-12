@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 
+
 namespace _8.hét.Entities
 {
-     public class Ball:Label
+     public class Ball: Abstractions.Toy
 
     {
+
         public Ball()
         {
             AutoSize = false;
@@ -24,14 +26,24 @@ namespace _8.hét.Entities
             DrawImage(e.Graphics);
         }
 
-        protected void DrawImage(Graphics g)
-        {
-            g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
-        }
+        //protected void DrawImage(Graphics g)
+        //{
+        //    g.FillEllipse(new SolidBrush(Color.Blue), 0, 0, Width, Height);
+        //}
 
         public void MoveBall()
         {
             Left += 1;
         }
+
+        protected override void DrawImage(Graphics g)
+        {
+            throw new NotImplementedException();
+        }
+
+        //protected override void DrawImage(Graphics g)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
