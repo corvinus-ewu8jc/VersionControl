@@ -53,7 +53,7 @@
     <Compile Include="Entities\Ball.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Entities\BallFactory.cs" />
+    <Compile Include="Entities\IToyFactory.cs" />
     <Compile Include="Entities\Car.cs">
       <SubType>Component</SubType>
     </Compile>

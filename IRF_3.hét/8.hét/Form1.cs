@@ -16,10 +16,10 @@ namespace _8.hét
 
     {
 
-        private List<Entities.Ball> _balls = new List<Entities.Ball>();
+        private List<Entities.Ball> _toys = new List<Entities.Ball>();
 
-        private Entities.BallFactory _factory;
-        public Entities.BallFactory Factory
+        private Entities.IToyFactory _factory;
+        public Entities.IToyFactory Factory
         {
             get { return _factory; }
             set { _factory = value; }
@@ -28,32 +28,32 @@ namespace _8.hét
         public Form1()
         {
             InitializeComponent();
-            Factory = new BallFactory();
+            Factory = new IToyFactory();
         }
 
         private void createTimer_Tick(object sender, EventArgs e)
         {
-            var ball = Factory.CreateNew();
-            _balls.Add((Ball)ball);
-            ball.Left = -ball.Width;
-            mainPanel.Controls.Add(ball);
+            var toy = Factory.CreateNew();
+            _toys.Add((Ball)toy);
+            toy.Left = -toy.Width;
+            mainPanel.Controls.Add(toy);
         }
 
         private void conveyorTimer_Tick(object sender, EventArgs e)
         {
             var maxPosition = 0;
-            foreach (var ball in _balls)
+            foreach (var ball in _toys)
             {
-                ball.MoveBall();
+                ball.MoveToy();
                 if (ball.Left > maxPosition)
                     maxPosition = ball.Left;
             }
 
             if (maxPosition > 1000)
             {
-                var oldestBall = _balls[0];
+                var oldestBall = _toys[0];
                 mainPanel.Controls.Remove(oldestBall);
-                _balls.Remove(oldestBall);
+                _toys.Remove(oldestBall);
             }
         }
     }

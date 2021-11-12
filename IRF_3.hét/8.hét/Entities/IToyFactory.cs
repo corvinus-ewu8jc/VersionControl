@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _8.hét.Entities
 {
-    public class BallFactory : Abstractions.IToyFactory
+    public class IToyFactory : Abstractions.IToyFactory
     {
     public Abstractions.Toy CreateNew()
     {
