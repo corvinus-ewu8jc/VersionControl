@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace _8.hét.Entities
 {
-    public class BallFactory
+    public class BallFactory : Abstractions.IToyFactory
     {
-        public Ball CreateNew()
-        {
-            return new Ball();
-        }
+    public Abstractions.Toy CreateNew()
+    {
+        return new Ball();
     }
+}
 }
