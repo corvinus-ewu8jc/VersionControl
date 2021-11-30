@@ -8,12 +8,8 @@ namespace IRF_9.hét.Entities
 {
     public class DeathProbability
     {
-        public class BirthProbability
-        {
-            public Gender Gender { get; set; }
-            public int Age { get; set; }
-            public double HalalozasValoszinusege { get; set; }
-
-        }
+        public Gender Gender { get; set; }
+        public int Age { get; set; }
+        public double HalalozasValoszinusege { get; set; }
     }
 }
