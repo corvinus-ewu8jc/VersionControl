@@ -153,23 +153,34 @@ namespace IRF_9.hét
                                     select x).Count();
                 Console.WriteLine(
                     string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+
+                DisplayResults();
+
+
             }
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Simulation();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-
-            if (openFileDialog.ShowDialog()==DialogResult.OK)
+            private void button1_Click(object sender, EventArgs e)
             {
-                textBox1.Text = openFileDialog.FileName;
+                Simulation();
             }
+
+            private void button2_Click(object sender, EventArgs e)
+            {
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.ShowDialog();
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    textBox1.Text = openFileDialog.FileName;
+                }
+            }
+            List<int> fiu = new List<int>;
+            List<int> lany = new List<int>;
+        }
+
+        public void DisplayResults()
+        {
+
         }
     }
 } 
