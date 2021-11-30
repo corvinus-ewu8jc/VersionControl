@@ -22,26 +22,7 @@ namespace IRF_9.hét
             DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
 
 
-            //Szimuláció
-
-            // Végigmegyünk a vizsgált éveken
-            for (int year = 2005; year <= 2024; year++)
-            {
-                // Végigmegyünk az összes személyen
-                for (int i = 0; i < Population.Count; i++)
-                {
-                    // Ide jön a szimulációs lépés
-                }
-
-                int nbrOfMales = (from x in Population
-                                  where x.Gender == Gender.Male && x.IsAlive
-                                  select x).Count();
-                int nbrOfFemales = (from x in Population
-                                    where x.Gender == Gender.Female && x.IsAlive
-                                    select x).Count();
-                Console.WriteLine(
-                    string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
-            }
+           
         }
 
         List<Person> Population = new List<Person>();
@@ -150,5 +131,45 @@ namespace IRF_9.hét
                 }
             }
         }
+
+        public void Simulation()
+        {
+            //Szimuláció
+
+            // Végigmegyünk a vizsgált éveken
+            for (int year = 2005; year <= 2024; year++)
+            {
+                // Végigmegyünk az összes személyen
+                for (int i = 0; i < Population.Count; i++)
+                {
+                    // Ide jön a szimulációs lépés
+                }
+
+                int nbrOfMales = (from x in Population
+                                  where x.Gender == Gender.Male && x.IsAlive
+                                  select x).Count();
+                int nbrOfFemales = (from x in Population
+                                    where x.Gender == Gender.Female && x.IsAlive
+                                    select x).Count();
+                Console.WriteLine(
+                    string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Simulation();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+
+            if (openFileDialog.ShowDialog()==DialogResult.OK)
+            {
+                textBox1.Text = openFileDialog.FileName;
+            }
+        }
     }
-}
+} 
