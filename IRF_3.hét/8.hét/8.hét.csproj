@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0975CA50-4D77-4322-8FEB-1F24E5B0370E}</ProjectGuid>
+    <ProjectGuid>{6D92A394-92AE-4ADE-AD0B-A34FB4B443E5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>UserMaintenance</RootNamespace>
-    <AssemblyName>UserMaintenance</AssemblyName>
+    <RootNamespace>_8.hét</RootNamespace>
+    <AssemblyName>8.hét</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,7 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\User.cs" />
+    <Compile Include="Abstractions\IToyFactory.cs" />
+    <Compile Include="Abstractions\Toy.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Entities\Ball.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Entities\IToyFactory.cs" />
+    <Compile Include="Entities\Car.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,11 +65,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource1.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,10 +77,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Resource1.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
